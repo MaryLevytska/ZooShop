@@ -1,0 +1,84 @@
+﻿<Window x:Class="ZooShopApp.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:ZooShopApp"
+        xmlns:viewModel ="clr-namespace:ZooShopApp.MVVM.ViewModel"
+        mc:Ignorable="d"
+         Height="600"
+        Width="1100"
+        Background="Transparent"
+        AllowsTransparency="True"
+        ResizeMode="NoResize"
+        WindowStyle="None">
+
+     <Border Background="AliceBlue" CornerRadius="30">
+        <Grid>
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="200"/>
+                <ColumnDefinition/>
+            </Grid.ColumnDefinitions>
+
+            <Grid.RowDefinitions>
+                <RowDefinition Height="100"/>
+                <RowDefinition/>
+            </Grid.RowDefinitions>
+            <StackPanel Grid.Row="0" Grid.Column="0">
+                <Label Content="Zoo Shop" 
+                   HorizontalAlignment="Center"
+                    Margin="0,10,0,0" 
+                    VerticalAlignment="Top"
+                   FontSize="20"
+                   FontWeight="ExtraBold"
+                   Foreground="#FF4D83DA"/>
+                <TextBlock Width="250"
+                       Height="40"
+                       VerticalAlignment="Top"
+                       HorizontalAlignment="Left" Margin="10,37,0,0"/>
+            </StackPanel>
+            <StackPanel Grid.Row="1" Grid.Column="0">
+
+
+                <RadioButton Content="Home" 
+                             Height="50"
+                             Foreground="Black"
+                             FontSize="14"
+                             Command="{Binding Path=CategoryCommand}"
+                             CommandParameter="4"
+                             Style="{StaticResource MenuButtonTheme}"/>
+
+                <RadioButton Content="Discovery" 
+                             Height="50"
+                             Foreground="Black"
+                             FontSize="14"
+                             Command="{Binding Path=CategoryCommand}"
+                             CommandParameter="4"
+                             Style="{StaticResource MenuButtonTheme}"/>
+
+                <RadioButton Content="Featured" 
+                             Height="50"
+                             Foreground="Black"
+                             FontSize="14"
+                             Command="{Binding Path=CategoryCommand}"
+                             CommandParameter="4"
+                             Style="{StaticResource MenuButtonTheme}"/>
+            </StackPanel>
+            <TextBox Width="250"
+                           Height="20"
+                           VerticalAlignment="Top"
+                           HorizontalAlignment="Left"
+                           Margin="5,25,0,0"
+                           Grid.Column="1"/>
+
+            <ContentControl Grid.Row="1" 
+                            Grid.Column="1" 
+                            Margin="10"
+                            Content="{Binding CurrentView}"/>
+
+            <DockPanel VerticalAlignment="Bottom" HorizontalAlignment="Right" Height="50" Width="50" Background="AliceBlue"/>
+            <DockPanel VerticalAlignment="Top" HorizontalAlignment="Left" Height="50" Width="50" Background="AliceBlue"/>
+
+        </Grid>
+    </Border>
+</Window>

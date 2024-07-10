@@ -1,0 +1,71 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <OutputType>WinExe</OutputType>
+    <TargetFramework>net6.0-windows</TargetFramework>
+    <Nullable>enable</Nullable>
+    <UseWPF>true</UseWPF>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <None Remove="Images\Aks.jpg" />
+    <None Remove="Images\Ara.jpg" />
+    <None Remove="Images\Eagle.jpg" />
+    <None Remove="Images\Husk.jpg" />
+    <None Remove="Images\Husky.jpg" />
+    <None Remove="Images\KaoMani.jpg" />
+    <None Remove="Images\Logo.jpg" />
+    <None Remove="Images\More.jpg" />
+    <None Remove="Images\rabbit.jpg" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Page Remove="Theme\TextboxTheme.xaml" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Content Include="Images\Aks.jpg">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Images\Ara.jpg">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Images\Eagle.jpg">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Images\Husk.jpg">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Images\Husky.jpg">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Images\KaoMani.jpg">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Images\Logo.jpg">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Images\More.jpg">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Images\rabbit.jpg">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Theme\TextboxTheme.xaml" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Folder Include="Fonts\" />
+    <Folder Include="MVVM\Model\" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Microsoft.Extensions.DependencyInjection" Version="8.0.0" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\ZooShop.Application\ZooShop.Application.csproj" />
+    <ProjectReference Include="..\ZooShop.Data\ZooShop.Data.csproj" />
+  </ItemGroup>
+
+</Project>
