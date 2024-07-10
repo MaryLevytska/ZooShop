@@ -11,6 +11,7 @@
     <None Remove="Images\Aks.jpg" />
     <None Remove="Images\Ara.jpg" />
     <None Remove="Images\Eagle.jpg" />
+    <None Remove="Images\Hus.jpg" />
     <None Remove="Images\Husk.jpg" />
     <None Remove="Images\Husky.jpg" />
     <None Remove="Images\KaoMani.jpg" />
@@ -31,6 +32,9 @@
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
     <Content Include="Images\Eagle.jpg">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Images\Hus.jpg">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
     <Content Include="Images\Husk.jpg">
