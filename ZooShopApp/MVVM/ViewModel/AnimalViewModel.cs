@@ -32,7 +32,7 @@ namespace ZooShopApp.MVVM.ViewModel
 
         internal void SetAnimal(uint id)
         {
-            Data = _AnimalService.Get(id);
+            Data = _AnimalService.Get(id); //Зберігає дані
         }
     }
 }

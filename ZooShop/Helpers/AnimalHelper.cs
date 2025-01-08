@@ -13,7 +13,7 @@ namespace ZooShop.ConsoleApp.Helpers
                 Console.WriteLine();
                 Console.WriteLine($"Id: #{item.Id}");
                 Console.WriteLine($"Breed: {item.Breed}");
-                Console.WriteLine($"Age: {item.Age} ");
+                Console.WriteLine($"Age: {item.Age} "); 
                 Console.WriteLine($"Height: {item.Height} ");
                 Console.WriteLine($"Weight: {item.Weight} ");
                 Console.WriteLine($"BloodTypes: {item.BloodTypes} ");

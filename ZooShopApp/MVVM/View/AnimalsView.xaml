@@ -7,6 +7,60 @@
              mc:Ignorable="d" 
              d:DesignHeight="450" d:DesignWidth="800">
     <Grid>
-        <Button />    
+         
+    <ListBox ItemsSource="{Binding Data}"
+             Background="Transparent">
+        <ListBox.ItemTemplate>
+            <DataTemplate>
+                <StackPanel>
+                    
+                        <Button  Command="{Binding DiscoveryCommand}"
+                                Background="Transparent"
+                                BorderBrush="Transparent"
+                                 Width="135"
+                                 Height="135"
+                                 Margin="10,30,0,0">
+                            <Button.Style>
+                                <Style TargetType="Button">
+                                    <Setter Property="Template">
+                                        <Setter.Value>
+                                            <ControlTemplate TargetType="Button">
+                                                <Border Background="Transparent" BorderThickness="0">
+                                                    <Border CornerRadius="10" BorderThickness="0" ClipToBounds="True">
+                                                        <Rectangle RadiusX="10" RadiusY="10">
+                                                            <Rectangle.Fill>
+                                                                <ImageBrush ImageSource="{Binding Data.Img}" Stretch="Fill"/>
+                                                            </Rectangle.Fill>
+                                                        </Rectangle>
+                                                    </Border>
+                                                </Border>
+                                            </ControlTemplate>
+                                        </Setter.Value>
+                                    </Setter>
+                                    <Setter Property="OverridesDefaultStyle" Value="True"/>
+                                    <Setter Property="BorderBrush" Value="Transparent"/>
+                                    <Setter Property="Background" Value="Transparent"/>
+                                </Style>
+                            </Button.Style>
+                        </Button>
+                        <TextBlock 
+
+                            Width="130"
+                            Height="130"
+                            FontSize="13"
+                            Foreground="#3B67B0"
+                            Background="Transparent"
+                            Text="{Binding Data.Breed}"
+                               FontWeight="Bold"/>
+
+                    </StackPanel>
+            </DataTemplate>
+        </ListBox.ItemTemplate>
+            <ListBox.ItemsPanel>
+                <ItemsPanelTemplate>
+                    <WrapPanel />
+                </ItemsPanelTemplate>
+            </ListBox.ItemsPanel>
+        </ListBox>
     </Grid>
 </UserControl>

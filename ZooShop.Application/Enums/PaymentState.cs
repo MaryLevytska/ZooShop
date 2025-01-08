@@ -4,10 +4,12 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace ZooShop.Application.Models
+namespace ZooShop.Application.Enums
 {
-    internal class Fish : Animal
+    public enum PaymentState 
     {
-        public bool FastSwimming { get; set; }
+        NotPayed = 1,
+        Payed = 2,
+        Canceled = 3,
     }
 }

@@ -17,7 +17,7 @@ namespace ZooShopApp.MVVM.ViewModel
                 var animalsViewModel = serviceProvider.GetRequiredService<AnimalsViewModel>();
 
                 var mainViewModel = serviceProvider.GetRequiredService<MainViewModel>();
-                mainViewModel.CurrentView = animalsViewModel;
+                mainViewModel.CurrentView = animalsViewModel; //ПЕРЕМИКАННЯ між вікнами
             });
         }
 

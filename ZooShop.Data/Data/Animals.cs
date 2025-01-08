@@ -3,10 +3,9 @@ using ZooShop.Application.Models;
 
 namespace ZooShop.Data.Data
 {
-    public static class Animals
+    public static class AnimalSeeds
     {
-
-        private static List<Animal> SetupInitialData()
+        public static List<Animal> GetInitialData()
         {
             var cat = new Mammals
             {
@@ -17,6 +16,7 @@ namespace ZooShop.Data.Data
                 Cover = Cover.Wool,
                 Age = Age.NewBorn,
                 Breed = Breed.KaoMani,
+                Img = "Images/KaoMani.jpg",
 
                 Functions = new[]
           {
@@ -38,6 +38,8 @@ namespace ZooShop.Data.Data
                 BloodTypes = BloodTypes.WarmBlooded,
                 Cover =     Cover.Wool,
                 Age = Age.GrowingUp,
+                Img = "Images/Husky.jpg",
+
                 Functions = new[]
                   {
                 Function.Adaptation,
@@ -59,6 +61,8 @@ namespace ZooShop.Data.Data
                 BloodTypes = BloodTypes.ColdBlooded,
                 Cover = Cover.Skin,
                 Age = Age.Maturity,
+                Img = "Images/axo.jpg",
+
                 Functions = new[]
                {
                 Function.Adaptation,
@@ -73,12 +77,14 @@ namespace ZooShop.Data.Data
             var frog = new Amphibia
             {
                 Id = 4,
-                Breed = Breed.Aha,
+                Breed = Breed.RaykaAmericanFrog,
                 Weight = 100,
                 Height = 8,
                 BloodTypes = BloodTypes.ColdBlooded,
                 Cover = Cover.SkinWithSlime,
                 Age = Age.Maturity,
+                Img = "Images/frog.jpg",
+
                 Functions = new[]
                {
                 Function.Adaptation,
@@ -99,6 +105,8 @@ namespace ZooShop.Data.Data
                 BloodTypes = BloodTypes.WarmBlooded,
                 Cover = Cover.Feather,
                 Age = Age.Maturity,
+                Img = "Images/Eagle.jpg",
+
                 Functions = new[]
                 {
                 Function.Adaptation,

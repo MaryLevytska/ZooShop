@@ -1,6 +1,9 @@
 ﻿using Microsoft.Extensions.DependencyInjection;
+using Proc.Application.Services.Conversations.Cosmos.MessageFilters;
 using System;
 using System.Windows;
+using System.Windows.Input;
+using ZooShop.Application.Services;
 using ZooShopApp.MVVM.ViewModel;
 
 namespace ZooShopApp
@@ -15,10 +18,17 @@ namespace ZooShopApp
         public App()
         {
             var _serviceCollection = new ServiceCollection();
-            _serviceCollection.AddSingleton<MainViewModel>();
-            _serviceCollection.AddSingleton<HomeViewModel>();
-            _serviceCollection.AddSingleton<AnimalViewModel>();
+            _serviceCollection.AddTransient<AnimalDetailsViewModel>();
             _serviceCollection.AddSingleton<AnimalsViewModel>();
+            _serviceCollection.AddSingleton<CartItemViewModel>();
+            _serviceCollection.AddSingleton<CartViewModel>();
+            _serviceCollection.AddSingleton<HomeViewModel>();
+            _serviceCollection.AddSingleton<MainViewModel>();
+            _serviceCollection.AddSingleton<BuyViewModel>();
+
+            _serviceCollection.AddSingleton<LiteDbCrudService>();
+            _serviceCollection.AddSingleton<AnimalService>();
+            _serviceCollection.AddSingleton<OrderService>();
 
             _serviceProvider = _serviceCollection.BuildServiceProvider();
         }
@@ -31,6 +41,7 @@ namespace ZooShopApp
 
             base.OnStartup(e);
         }
+
     }
 }
 

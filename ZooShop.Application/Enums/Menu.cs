@@ -6,5 +6,8 @@
         Amphibia = 2,
         Birds = 3,
         AllAnimals = 4,
+        Cart = 5,
+        Order = 6,
+
     }
 }
