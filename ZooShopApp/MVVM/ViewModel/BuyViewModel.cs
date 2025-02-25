@@ -20,7 +20,7 @@ namespace ZooShopApp.MVVM.ViewModel
                 {
                     Id = Guid.NewGuid(),
                     Price = cartVM.TotalPrice,
-                    Items = cartVM.Items.Select(f => f.Data).ToList(),
+                    CartItems = cartVM.Items.Select(f => f.Data).ToList(),
                     Address = Adress,
                     UserEmail = Email,
                     UserName = Name,

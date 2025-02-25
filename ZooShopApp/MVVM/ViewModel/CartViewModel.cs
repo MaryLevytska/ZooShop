@@ -38,12 +38,12 @@ namespace ZooShopApp.MVVM.ViewModel
 
         public RelayCommand OrderCommand { get; init; }
 
-        public void AddAnimalById(uint id)
+        public void AddAnimalById(Guid id)
         {
             Items.Add(new CartItemViewModel(id, _serviceProvider));
             OnPropertyChanged("TotalPrice");
         }
-        public void RemoveAnimalByID(uint id)
+        public void RemoveAnimalByID(Guid id)
         {
             Items = Items.Where(f => f.Animal.Id != id).ToList();
         }

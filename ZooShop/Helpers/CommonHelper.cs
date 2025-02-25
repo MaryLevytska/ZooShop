@@ -23,6 +23,18 @@ namespace ZooShop.ConsoleApp.Helpers
                 }
             }
         }
+        public static Guid ReadGuid(params string[] labels)
+        {
+            while (true)
+            {
+                foreach (var item in labels)
+                {
+                    Console.WriteLine(item);
+                }
+                if (Guid.TryParse(Console.ReadLine(), out Guid number))
+                    return number;
+            }
+        }
 
         public static bool ReadBool(string labels)
         {

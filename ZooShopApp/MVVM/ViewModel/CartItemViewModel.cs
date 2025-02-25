@@ -16,7 +16,7 @@ namespace ZooShopApp.MVVM.ViewModel
 
         public Animal Animal { get; set; }
 
-        public CartItemViewModel(uint animalId, IServiceProvider serviceProvider)
+        public CartItemViewModel(Guid animalId, IServiceProvider serviceProvider)
         {
             _animalService = serviceProvider.GetRequiredService<AnimalService>();
             var cartVM = serviceProvider.GetRequiredService<CartViewModel>();

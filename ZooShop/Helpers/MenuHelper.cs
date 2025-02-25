@@ -57,7 +57,7 @@ namespace ZooShop.ConsoleApp.Helpers
             if (operation == 1)
             {
                 Console.WriteLine($"Provide ID of the animal");
-                var animalID = CommonHelper.ReadPositiveNumber();
+                var animalID = CommonHelper.ReadGuid();
                 var animal = AnimalService.Get(animalID);
                 AnimalHelper.DisplayAnimal(animal);
                 AnimalHelper.RequestToBuyAnimal(animal);
@@ -85,7 +85,7 @@ namespace ZooShop.ConsoleApp.Helpers
                 else if (secretsofazoo == 2)
                 {
                     Console.Write("Animal Id: ");
-                    var id = CommonHelper.ReadPositiveNumber();
+                    var id = CommonHelper.ReadGuid();
                     AnimalService.Delete(id);
                 }
 

@@ -5,11 +5,10 @@ namespace ZooShop.Data.Data
 {
     public static class AnimalSeeds
     {
-        public static List<Animal> GetInitialData()
+        public static List<ZooShop.Application.Models.Animal> GetInitialData()
         {
             var cat = new Mammals
             {
-                Id = 1,
                 Weight = 500,
                 Height = 10,
                 BloodTypes = BloodTypes.WarmBlooded,
@@ -31,7 +30,6 @@ namespace ZooShop.Data.Data
 
             var dog = new Mammals
             {
-                Id = 2,
                 Breed = Breed.Husky,
                 Weight = 10000,
                 Height = 40,
@@ -54,7 +52,6 @@ namespace ZooShop.Data.Data
 
             var axolotl = new Amphibia
             {
-                Id = 3,
                 Breed = Breed.Axolotl,
                 Weight = 300,
                 Height = 30,
@@ -76,7 +73,6 @@ namespace ZooShop.Data.Data
             };
             var frog = new Amphibia
             {
-                Id = 4,
                 Breed = Breed.RaykaAmericanFrog,
                 Weight = 100,
                 Height = 8,
@@ -98,7 +94,6 @@ namespace ZooShop.Data.Data
             };
             var bird = new Birds
             {
-                Id = 5,
                 Breed = Breed.Eagle,
                 Weight = 700,
                 Height = 50,
@@ -119,7 +114,7 @@ namespace ZooShop.Data.Data
                 Price = 100000,
             };
 
-            return new List<Animal> { cat, dog, axolotl, frog, bird, };
+            return new List<ZooShop.Application.Models.Animal> { cat, dog, axolotl, frog, bird, };
         }
     };
 }

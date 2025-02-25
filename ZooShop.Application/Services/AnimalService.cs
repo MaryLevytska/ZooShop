@@ -20,9 +20,9 @@ namespace ZooShop.Application.Services
             _db.Add(animal);
         }
 
-        public void Delete(uint id)
+        public void Delete(Guid id)
         {
-            _db.Delete<Animal>((int)id);
+            _db.Delete<Animal>(id);
         }
 
         public List<Animal> GetAll()
@@ -30,9 +30,9 @@ namespace ZooShop.Application.Services
             return _db.GetAll<Animal>();
         }
 
-        public Animal Get(uint id)
+        public Animal Get(Guid id)
         {
-           return _db.Get<Animal>((int)id);
+           return _db.Get<Animal>(id);
 
         }
 

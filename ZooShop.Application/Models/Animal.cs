@@ -1,19 +1,30 @@
-﻿using System.ComponentModel;
+﻿using System;
+using System.Collections.Generic;
 using ZooShop.Application.Enums;
 
-namespace ZooShop.Application.Models
+namespace ZooShop.Application.Models;
+
+public partial class Animal
 {
-    public class Animal
-    {
-        public uint Height { get; set; }
-        public uint Weight { get; set; }
-        public Breed Breed { get; set; }
-        public string Img { get; set; } 
-        public Cover Cover { get; set; }
-        public Age Age { get; set; }
-        public BloodTypes BloodTypes { get; set; }
-        public double Price  { get; set; }
-        public uint Id { get; set; }
-        public Function[] Functions { get; set; }
-    }
+    public Guid Id { get; set; }
+
+    public int Type { get; set; }
+
+    public double Price { get; set; }
+
+    public string? Description { get; set; }
+
+    public bool? FastSwimming { get; set; }
+
+    public uint Height { get; set; }
+    public uint Weight { get; set; }
+    public Breed Breed { get; set; }
+    public string Img { get; set; }
+    public Cover Cover { get; set; }
+    public Age Age { get; set; }
+    public BloodTypes BloodTypes { get; set; }
+    public Function[] Functions { get; set; }
+
+
+    public virtual ICollection<CartItem> CartItems { get; set; } = new List<CartItem>();
 }

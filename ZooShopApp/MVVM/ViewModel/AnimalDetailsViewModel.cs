@@ -45,7 +45,7 @@ namespace ZooShopApp.MVVM.ViewModel
             AddAnimalToCartById = new RelayCommand(f =>
             {
                 var cartViewModel = serviceProvider.GetRequiredService<CartViewModel>();
-                cartViewModel.AddAnimalById(Convert.ToUInt32(f));//ДОДАЄ тваринку в кошик
+                cartViewModel.AddAnimalById(Guid.Parse(f.ToString()));//ДОДАЄ тваринку в кошик
 
                 var mainViewModel = serviceProvider.GetRequiredService<MainViewModel>();
                 mainViewModel.CurrentView = cartViewModel;//ПЕРЕМИКАЄ між вікнами 
