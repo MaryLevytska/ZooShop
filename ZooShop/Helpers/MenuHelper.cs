@@ -1,5 +1,5 @@
 ﻿using Microsoft.Extensions.DependencyInjection;
-using ZooShop.Application.Models;
+using ZooShop.Core.Models;
 using ZooShop.Application.Services;
 
 namespace ZooShop.ConsoleApp.Helpers

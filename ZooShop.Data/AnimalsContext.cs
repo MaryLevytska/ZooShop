@@ -1,7 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using Microsoft.EntityFrameworkCore;
-using ZooShop.Application.Models;
+using ZooShop.Core.Models;
 
 namespace ZooShop.Data;
 

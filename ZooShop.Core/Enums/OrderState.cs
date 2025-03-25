@@ -4,7 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace ZooShop.Application.Enums
+namespace ZooShop.Core.Enums
 {
     public enum OrderState
     {

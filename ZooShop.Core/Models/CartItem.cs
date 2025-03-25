@@ -4,7 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace ZooShop.Application.Models
+namespace ZooShop.Core.Models
 {
     public class CartItem
     {

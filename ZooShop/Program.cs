@@ -1,7 +1,6 @@
 ﻿// See https://aka.ms/new-console-template for more information
 
 using Microsoft.Extensions.DependencyInjection;
-using Proc.Application.Services.Conversations.Cosmos.MessageFilters;
 using ZooShop.Application.Services;
 using ZooShop.ConsoleApp.Helpers;
 using ZooShop.Data;

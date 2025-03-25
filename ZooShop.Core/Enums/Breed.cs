@@ -1,6 +1,6 @@
-﻿namespace ZooShop.Application.Enums
+﻿namespace ZooShop.Core.Enums
 {
-    public enum Breed : Byte
+    public enum Breed : byte
     {
         KaoMani = 1,
         Husky = 2,

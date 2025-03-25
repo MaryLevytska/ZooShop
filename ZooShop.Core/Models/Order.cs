@@ -1,6 +1,6 @@
-﻿using ZooShop.Application.Enums;
+﻿using ZooShop.Core.Enums;
 
-namespace ZooShop.Application.Models
+namespace ZooShop.Core.Models
 {
     public class Order
     {

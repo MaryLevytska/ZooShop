@@ -1,11 +1,11 @@
-﻿using ZooShop.Application.Enums;
-using ZooShop.Application.Models;
+﻿using ZooShop.Core.Enums;
+using ZooShop.Core.Models;
 
 namespace ZooShop.Data.Data
 {
     public static class AnimalSeeds
     {
-        public static List<ZooShop.Application.Models.Animal> GetInitialData()
+        public static List<ZooShop.Core.Models.Animal> GetInitialData()
         {
             var cat = new Mammals
             {
@@ -114,7 +114,7 @@ namespace ZooShop.Data.Data
                 Price = 100000,
             };
 
-            return new List<ZooShop.Application.Models.Animal> { cat, dog, axolotl, frog, bird, };
+            return new List<ZooShop.Core.Models.Animal> { cat, dog, axolotl, frog, bird, };
         }
     };
 }

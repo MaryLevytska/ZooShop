@@ -4,10 +4,11 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace ZooShop.Application.Models
+namespace ZooShop.Core.Enums
 {
-    internal class Fish : Animal
+    public enum BloodTypes
     {
-        public bool FastSwimming { get; set; }
+        WarmBlooded = 1,
+        ColdBlooded = 2
     }
 }

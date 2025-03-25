@@ -1,7 +1,7 @@
 ﻿using Microsoft.Extensions.DependencyInjection;
 using System;
 using System.Windows;
-using ZooShop.Application.Enums;
+using ZooShop.Core.Enums;
 using ZooShopApp.Core;
 
 namespace ZooShopApp.MVVM.ViewModel

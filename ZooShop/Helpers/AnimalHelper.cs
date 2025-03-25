@@ -1,5 +1,5 @@
-﻿using ZooShop.Application.Enums;
-using ZooShop.Application.Models;
+﻿using ZooShop.Core.Enums;
+using ZooShop.Core.Models;
 
 namespace ZooShop.ConsoleApp.Helpers
 {

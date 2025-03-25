@@ -1,41 +1,48 @@
-﻿using Microsoft.Extensions.DependencyInjection;
-using Proc.Application.Services.Conversations.Cosmos.MessageFilters;
-using System.Text.Json;
-using ZooShop.Application.Enums;
-using ZooShop.Application.Models;
-using ZooShop.Application.Services;
+﻿using Microsoft.EntityFrameworkCore;
+using ZooShop.Core.Models;
+using ZooShop.Data;
 
 namespace ZooShop.Application.Services
 {
     public class AnimalService
     {
-        private LiteDbCrudService _db;
-        public AnimalService(IServiceProvider serviceProvider)
+        private AnimalsContext _animalsContext;
+        public AnimalService(AnimalsContext animalsContext)
         {
-            _db = serviceProvider.GetRequiredService<LiteDbCrudService>();
+            _animalsContext = animalsContext;
         }
 
         public void Add(Animal animal)
         {
-            _db.Add(animal);
+            _animalsContext.Animals.Add(animal);
+            _animalsContext.SaveChanges();
         }
 
         public void Delete(Guid id)
         {
-            _db.Delete<Animal>(id);
+            _animalsContext.Animals.Where(f => f.Id == id).ExecuteDelete();
+            _animalsContext.SaveChanges();
         }
 
         public List<Animal> GetAll()
         {
-            return _db.GetAll<Animal>();
+            return _animalsContext.Animals.ToList();
         }
 
         public Animal Get(Guid id)
         {
-           return _db.Get<Animal>(id);
+            return _animalsContext.Animals.FirstOrDefault(f => f.Id == id);
 
         }
 
+        public void UpgradePrice(Guid id)
+        {
+            var animal = Get(id);
+            if (animal != null)
+            {
+                animal.Price += 100;
+                _animalsContext.SaveChanges();
+            }
+        }
     }
-
 }

@@ -3,8 +3,9 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Linq.Expressions;
 using LiteDB;
+using ZooShop.Application.Services;
 
-namespace Proc.Application.Services.Conversations.Cosmos.MessageFilters
+namespace ZooShop.Application.Services
 {
     public sealed class LiteDbCrudService : IDisposable
     {
@@ -55,7 +56,7 @@ namespace Proc.Application.Services.Conversations.Cosmos.MessageFilters
             using var _db = new LiteDatabase(_dbName);
             var collection = _db.GetCollection<T>(typeof(T).Name);
 
-             collection.Delete(id);
+            collection.Delete(id);
         }
 
         public bool Exists<T>(Expression<Func<T, bool>> predicate)

@@ -4,11 +4,12 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace ZooShop.Application.Enums
+namespace ZooShop.Core.Enums
 {
-    public enum BloodTypes
+    public enum PaymentState
     {
-        WarmBlooded = 1,
-        ColdBlooded = 2
+        NotPayed = 1,
+        Payed = 2,
+        Canceled = 3,
     }
 }

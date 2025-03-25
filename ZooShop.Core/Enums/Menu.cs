@@ -1,4 +1,4 @@
-﻿namespace ZooShop.Application.Enums
+﻿namespace ZooShop.Core.Enums
 {
     public enum Menu
     {

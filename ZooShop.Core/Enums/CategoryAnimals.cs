@@ -4,12 +4,12 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace ZooShop.Application.Enums
+namespace ZooShop.Core.Enums
 {
-    public enum PaymentState 
+    public enum CategoryAnimals
     {
-        NotPayed = 1,
-        Payed = 2,
-        Canceled = 3,
+        Mammal = 1,
+        Amphibia = 2,
+        Bird = 3,
     }
 }

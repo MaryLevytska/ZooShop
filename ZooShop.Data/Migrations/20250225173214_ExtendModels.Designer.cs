@@ -25,7 +25,7 @@ namespace ZooShop.Data.Migrations
 
             SqlServerModelBuilderExtensions.UseIdentityColumns(modelBuilder);
 
-            modelBuilder.Entity("ZooShop.Application.Models.Animal", b =>
+            modelBuilder.Entity("ZooShop.Core.Models.Animal", b =>
                 {
                     b.Property<Guid>("Id")
                         .ValueGeneratedOnAdd()
@@ -75,7 +75,7 @@ namespace ZooShop.Data.Migrations
                     b.ToTable("Animals");
                 });
 
-            modelBuilder.Entity("ZooShop.Application.Models.CartItem", b =>
+            modelBuilder.Entity("ZooShop.Core.Models.CartItem", b =>
                 {
                     b.Property<Guid>("Id")
                         .HasColumnType("uniqueidentifier");
@@ -101,7 +101,7 @@ namespace ZooShop.Data.Migrations
                     b.ToTable("CartItems");
                 });
 
-            modelBuilder.Entity("ZooShop.Application.Models.Order", b =>
+            modelBuilder.Entity("ZooShop.Core.Models.Order", b =>
                 {
                     b.Property<Guid>("Id")
                         .HasColumnType("uniqueidentifier");
@@ -141,15 +141,15 @@ namespace ZooShop.Data.Migrations
                     b.ToTable("Orders");
                 });
 
-            modelBuilder.Entity("ZooShop.Application.Models.CartItem", b =>
+            modelBuilder.Entity("ZooShop.Core.Models.CartItem", b =>
                 {
-                    b.HasOne("ZooShop.Application.Models.Animal", "Animal")
+                    b.HasOne("ZooShop.Core.Models.Animal", "Animal")
                         .WithMany("CartItems")
                         .HasForeignKey("AnimalId")
                         .IsRequired()
                         .HasConstraintName("FK_CartItems_Animals");
 
-                    b.HasOne("ZooShop.Application.Models.Order", "Order")
+                    b.HasOne("ZooShop.Core.Models.Order", "Order")
                         .WithMany("CartItems")
                         .HasForeignKey("OrderId")
                         .IsRequired()
@@ -160,12 +160,12 @@ namespace ZooShop.Data.Migrations
                     b.Navigation("Order");
                 });
 
-            modelBuilder.Entity("ZooShop.Application.Models.Animal", b =>
+            modelBuilder.Entity("ZooShop.Core.Models.Animal", b =>
                 {
                     b.Navigation("CartItems");
                 });
 
-            modelBuilder.Entity("ZooShop.Application.Models.Order", b =>
+            modelBuilder.Entity("ZooShop.Core.Models.Order", b =>
                 {
                     b.Navigation("CartItems");
                 });
