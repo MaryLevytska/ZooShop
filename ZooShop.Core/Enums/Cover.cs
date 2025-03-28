@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace ZooShop.Core.Enums
 {
-    public enum Cover
+    public enum Cover:byte
     {
         Wool = 1,
         Skin = 2,

@@ -8,7 +8,7 @@ public partial class Animal
 {
     public Guid Id { get; set; }
 
-    public int Type { get; set; }
+    public byte Type { get; set; }
 
     public double Price { get; set; }
 
@@ -16,8 +16,8 @@ public partial class Animal
 
     public bool? FastSwimming { get; set; }
 
-    public uint Height { get; set; }
-    public uint Weight { get; set; }
+    public double Height { get; set; }
+    public double Weight { get; set; }
     public Breed Breed { get; set; }
     public string Img { get; set; }
     public Cover Cover { get; set; }

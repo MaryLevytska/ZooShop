@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace ZooShop.Core.Enums
 {
-    public enum BloodTypes
+    public enum BloodTypes : byte
     {
         WarmBlooded = 1,
         ColdBlooded = 2

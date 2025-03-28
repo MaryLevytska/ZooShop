@@ -1,6 +1,6 @@
 ﻿namespace ZooShop.Core.Enums
 {
-    public enum Age
+    public enum Age:byte
     {
         NewBorn = 1,
         GrowingUp = 2,

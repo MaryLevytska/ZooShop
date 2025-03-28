@@ -1,6 +1,6 @@
 ﻿namespace ZooShop.Core.Enums
 {
-    public enum Function
+    public enum Function : byte
     {
         Adaptation = 1,
         Assault = 2,

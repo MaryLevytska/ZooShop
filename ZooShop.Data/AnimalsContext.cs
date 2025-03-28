@@ -32,6 +32,7 @@ public partial class AnimalsContext : DbContext
         {
             entity.Property(e => e.Id).ValueGeneratedOnAdd();
             entity.Property(e => e.Description).HasMaxLength(500);
+            entity.Ignore(e => e.Functions);
         });
 
         modelBuilder.Entity<CartItem>(entity =>
